@@ -3,7 +3,7 @@ import { jwtVerify } from "jose";
 
 export async function middleware(request) {
   const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImR1bW15QGdtYWlsLmNvbSIsImV4cCI6MTcxMDA0NzU4Mn0.EXAte1WNrmIVtfcstzH1ly1vm7mcMCthejVM0qXF3go";
+    "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im0uc2hvZ28uMDQwOUBnbWFpbC5jb20iLCJleHAiOjE3MTAwNTk2NTN9.3oS29Yjb8nxfeiwPupC1CTrRYCJsIKhphmCzGo6pMjs";
   //const token = await request.headers.get("Authorization")?.split(" ")[i];
 
   if (!token) {
