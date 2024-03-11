@@ -2,9 +2,7 @@ import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
 export async function middleware(request) {
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im0uc2hvZ28uMDQwOUBnbWFpbC5jb20iLCJleHAiOjE3MTAwNTk2NTN9.3oS29Yjb8nxfeiwPupC1CTrRYCJsIKhphmCzGo6pMjs";
-  //const token = await request.headers.get("Authorization")?.split(" ")[i];
+  const token = await request.headers.get("Authorization")?.split(" ")[1];
 
   if (!token) {
     return NextResponse.json({ message: "トークンがありません" });
