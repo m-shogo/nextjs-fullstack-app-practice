@@ -22,7 +22,7 @@ const CreateItem = () => {
           price: price,
           image: image,
           description: description,
-          email: "ダミーデータ",
+          email: "m.shogo.0409@gmail.com",
         }),
       });
       const jsonData = await response.json();
