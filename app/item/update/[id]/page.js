@@ -14,7 +14,7 @@ const UpdateItem = (context) => {
   useEffect(() => {
     const getSingleItem = async (id) => {
       const response = await fetch(
-        `http://localhost:3002/api/item/readsingle/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/readsingle/${id}`,
         { cache: "no-store" }
       );
       const jsonData = await response.json();
