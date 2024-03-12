@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import useAuth from "../../utils/useAuth";
+import ImgInput from "../../components/imgInput";
 
 const CreateItem = () => {
   const [title, setTitle] = useState("");
@@ -39,6 +40,7 @@ const CreateItem = () => {
     return (
       <div>
         <h1 className="page-title">アイテム作成</h1>
+        <ImgInput setImage={setImage}/>
         <form onSubmit={handleSubmit}>
           <input
             value={title}
