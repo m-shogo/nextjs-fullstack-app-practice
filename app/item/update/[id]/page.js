@@ -33,7 +33,7 @@ const UpdateItem = (context) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:3002/api/item/update/${context.params.id}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/item/update/${context.params.id}`,
         {
           method: "PUT",
           headers: {
